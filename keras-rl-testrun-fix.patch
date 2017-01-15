@@ -1,0 +1,25 @@
+From cfa967d9a0ae92fd03c9a8301dec49d8f958f0dd Mon Sep 17 00:00:00 2001
+From: Dennis Francis <dennisfrancis.in@gmail.com>
+Date: Thu, 12 Jan 2017 12:49:38 +0530
+Subject: [PATCH] pass nb_episode_steps parameter to callbacks in test run like
+ in train run
+
+---
+ rl/core.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/rl/core.py b/rl/core.py
+index 6decac6..a91b507 100644
+--- a/rl/core.py
++++ b/rl/core.py
+@@ -283,6 +283,7 @@ class Agent(object):
+             episode_logs = {
+                 'episode_reward': episode_reward,
+                 'nb_steps': episode_step,
++                'nb_episode_steps': episode_step
+             }
+             callbacks.on_episode_end(episode, episode_logs)
+         callbacks.on_train_end()
+-- 
+2.9.3
+
