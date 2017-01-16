@@ -19,15 +19,15 @@
 ```bash
 $ git clone https://github.com/matthiasplappert/keras-rl.git
 
-$ git clone https://github.com/dennisfrancis/udacity-ml-nd.git
+$ git clone https://github.com/dennisfrancis/LunarLander-v2.git
 
 $ cd keras-rl
 
-$ git am < ../udacity-ml-nd/capstone/keras-rl-testrun-fix.patch   # Apply a patch for keras-rl to work with the project
+$ git am < ../LunarLander-v2/keras-rl-testrun-fix.patch   # Apply a patch for keras-rl to work with the project
 
-$ cd ../udacity-ml-nd/capstone/src
+$ cd ../LunarLander-v2/src
 
-$ ln -s ../../../keras-rl/rl rl   # create a symlink to rl dir of keras-rl to the capstone's src dir
+$ ln -s ../../keras-rl/rl rl   # create a symlink to rl dir of keras-rl to src dir
 ```
 
 ## Running the agents
@@ -47,5 +47,5 @@ $ python run_full_dqn.py          # To run improved DQN agent
 ```
 
 ## Logs and plots
-Logs and plots are in `log` dir under the `capstone` subdir.
+Logs and plots will go into `log` subdir.
 
